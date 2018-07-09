@@ -34,9 +34,9 @@ public class GameController {
 		return "game";
 	}
 
-	@RequestMapping("/play/move/{houseNumber}")
-	public String go(@PathVariable int houseNumber, @ModelAttribute("board") GameBoard board) {
-		gameService.move(board, houseNumber);
+	@RequestMapping("/play/move/{pitNumber}")
+	public String go(@PathVariable int pitNumber, @ModelAttribute("board") GameBoard board) {
+		gameService.move(board, pitNumber);
 		return "redirect:/play";
 	}
 
